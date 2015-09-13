@@ -83,9 +83,11 @@ public class PongGame extends Sprite implements IAnimatable {
     private function collisionDedection():Boolean {
         _ballRect = new flash.geom.Rectangle(_ball.x, _ball.y, _ball.width, _ball.height);
 
-        _player1.playerBounds = new flash.geom.Rectangle(_player1.x, _player1.y, _player1.width, _player1.height);
+        _player1.playerBounds.x = _player1.x;
+        _player1.playerBounds.y = _player1.y;
 
-        _player2.playerBounds = new flash.geom.Rectangle(_player2.x, _player2.y, _player2.width, _player2.height);
+        _player2.playerBounds.x = _player2.x;
+        _player2.playerBounds.y = _player2.y;
 
         var currentRect:Rectangle;
 
